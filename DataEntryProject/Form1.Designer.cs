@@ -29,20 +29,23 @@
         private void InitializeComponent()
         {
             this.grbDataEntry = new System.Windows.Forms.GroupBox();
+            this.btnClear = new System.Windows.Forms.Button();
+            this.btnAccept = new System.Windows.Forms.Button();
+            this.txtZip = new System.Windows.Forms.TextBox();
+            this.txtState = new System.Windows.Forms.TextBox();
+            this.txtCity = new System.Windows.Forms.TextBox();
+            this.txtAddress = new System.Windows.Forms.TextBox();
+            this.txtName = new System.Windows.Forms.TextBox();
             this.lblZip = new System.Windows.Forms.Label();
             this.lblState = new System.Windows.Forms.Label();
             this.lblCity = new System.Windows.Forms.Label();
             this.lblAddress = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
             this.grbTimer = new System.Windows.Forms.GroupBox();
-            this.txtName = new System.Windows.Forms.TextBox();
-            this.txtAddress = new System.Windows.Forms.TextBox();
-            this.txtCity = new System.Windows.Forms.TextBox();
-            this.txtState = new System.Windows.Forms.TextBox();
-            this.txtZip = new System.Windows.Forms.TextBox();
-            this.btnAccept = new System.Windows.Forms.Button();
-            this.btnClear = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtTimer = new System.Windows.Forms.TextBox();
+            this.btnStart = new System.Windows.Forms.Button();
+            this.btnPause = new System.Windows.Forms.Button();
+            this.btnExit = new System.Windows.Forms.Button();
             this.grbDataEntry.SuspendLayout();
             this.grbTimer.SuspendLayout();
             this.SuspendLayout();
@@ -67,6 +70,59 @@
             this.grbDataEntry.TabIndex = 0;
             this.grbDataEntry.TabStop = false;
             this.grbDataEntry.Text = "Data Entry";
+            // 
+            // btnClear
+            // 
+            this.btnClear.Location = new System.Drawing.Point(167, 273);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(75, 23);
+            this.btnClear.TabIndex = 11;
+            this.btnClear.Text = "&Clear";
+            this.btnClear.UseVisualStyleBackColor = true;
+            // 
+            // btnAccept
+            // 
+            this.btnAccept.Location = new System.Drawing.Point(34, 273);
+            this.btnAccept.Name = "btnAccept";
+            this.btnAccept.Size = new System.Drawing.Size(75, 23);
+            this.btnAccept.TabIndex = 10;
+            this.btnAccept.Text = "&Accept";
+            this.btnAccept.UseVisualStyleBackColor = true;
+            // 
+            // txtZip
+            // 
+            this.txtZip.Location = new System.Drawing.Point(113, 219);
+            this.txtZip.Name = "txtZip";
+            this.txtZip.Size = new System.Drawing.Size(129, 20);
+            this.txtZip.TabIndex = 9;
+            // 
+            // txtState
+            // 
+            this.txtState.Location = new System.Drawing.Point(113, 169);
+            this.txtState.Name = "txtState";
+            this.txtState.Size = new System.Drawing.Size(129, 20);
+            this.txtState.TabIndex = 8;
+            // 
+            // txtCity
+            // 
+            this.txtCity.Location = new System.Drawing.Point(113, 121);
+            this.txtCity.Name = "txtCity";
+            this.txtCity.Size = new System.Drawing.Size(129, 20);
+            this.txtCity.TabIndex = 7;
+            // 
+            // txtAddress
+            // 
+            this.txtAddress.Location = new System.Drawing.Point(113, 80);
+            this.txtAddress.Name = "txtAddress";
+            this.txtAddress.Size = new System.Drawing.Size(129, 20);
+            this.txtAddress.TabIndex = 6;
+            // 
+            // txtName
+            // 
+            this.txtName.Location = new System.Drawing.Point(113, 30);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(129, 20);
+            this.txtName.TabIndex = 5;
             // 
             // lblZip
             // 
@@ -115,79 +171,60 @@
             // 
             // grbTimer
             // 
-            this.grbTimer.Controls.Add(this.textBox1);
-            this.grbTimer.Location = new System.Drawing.Point(454, 45);
+            this.grbTimer.Controls.Add(this.btnExit);
+            this.grbTimer.Controls.Add(this.btnPause);
+            this.grbTimer.Controls.Add(this.btnStart);
+            this.grbTimer.Controls.Add(this.txtTimer);
+            this.grbTimer.Location = new System.Drawing.Point(390, 45);
             this.grbTimer.Name = "grbTimer";
             this.grbTimer.Size = new System.Drawing.Size(200, 344);
             this.grbTimer.TabIndex = 1;
             this.grbTimer.TabStop = false;
             this.grbTimer.Text = "Timer";
             // 
-            // txtName
+            // txtTimer
             // 
-            this.txtName.Location = new System.Drawing.Point(113, 30);
-            this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(129, 20);
-            this.txtName.TabIndex = 5;
+            this.txtTimer.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTimer.Location = new System.Drawing.Point(56, 37);
+            this.txtTimer.Name = "txtTimer";
+            this.txtTimer.ReadOnly = true;
+            this.txtTimer.Size = new System.Drawing.Size(100, 20);
+            this.txtTimer.TabIndex = 0;
+            this.txtTimer.Text = "00:00:00";
+            this.txtTimer.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // txtAddress
+            // btnStart
             // 
-            this.txtAddress.Location = new System.Drawing.Point(113, 80);
-            this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Size = new System.Drawing.Size(129, 20);
-            this.txtAddress.TabIndex = 6;
+            this.btnStart.Location = new System.Drawing.Point(68, 82);
+            this.btnStart.Name = "btnStart";
+            this.btnStart.Size = new System.Drawing.Size(75, 23);
+            this.btnStart.TabIndex = 12;
+            this.btnStart.Text = "&Start";
+            this.btnStart.UseVisualStyleBackColor = true;
             // 
-            // txtCity
+            // btnPause
             // 
-            this.txtCity.Location = new System.Drawing.Point(113, 121);
-            this.txtCity.Name = "txtCity";
-            this.txtCity.Size = new System.Drawing.Size(129, 20);
-            this.txtCity.TabIndex = 7;
+            this.btnPause.Location = new System.Drawing.Point(68, 142);
+            this.btnPause.Name = "btnPause";
+            this.btnPause.Size = new System.Drawing.Size(75, 23);
+            this.btnPause.TabIndex = 13;
+            this.btnPause.Text = "&Pause";
+            this.btnPause.UseVisualStyleBackColor = true;
             // 
-            // txtState
+            // btnExit
             // 
-            this.txtState.Location = new System.Drawing.Point(113, 169);
-            this.txtState.Name = "txtState";
-            this.txtState.Size = new System.Drawing.Size(129, 20);
-            this.txtState.TabIndex = 8;
-            // 
-            // txtZip
-            // 
-            this.txtZip.Location = new System.Drawing.Point(113, 219);
-            this.txtZip.Name = "txtZip";
-            this.txtZip.Size = new System.Drawing.Size(129, 20);
-            this.txtZip.TabIndex = 9;
-            // 
-            // btnAccept
-            // 
-            this.btnAccept.Location = new System.Drawing.Point(34, 273);
-            this.btnAccept.Name = "btnAccept";
-            this.btnAccept.Size = new System.Drawing.Size(75, 23);
-            this.btnAccept.TabIndex = 10;
-            this.btnAccept.Text = "Accept";
-            this.btnAccept.UseVisualStyleBackColor = true;
-            // 
-            // btnClear
-            // 
-            this.btnClear.Location = new System.Drawing.Point(156, 272);
-            this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(75, 23);
-            this.btnClear.TabIndex = 11;
-            this.btnClear.Text = "Clear";
-            this.btnClear.UseVisualStyleBackColor = true;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(56, 37);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 0;
+            this.btnExit.Location = new System.Drawing.Point(68, 285);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(75, 23);
+            this.btnExit.TabIndex = 14;
+            this.btnExit.Text = "E&xit";
+            this.btnExit.UseVisualStyleBackColor = true;
             // 
             // frmDataEntry
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(633, 450);
             this.Controls.Add(this.grbTimer);
             this.Controls.Add(this.grbDataEntry);
             this.Name = "frmDataEntry";
@@ -216,7 +253,10 @@
         private System.Windows.Forms.TextBox txtCity;
         private System.Windows.Forms.TextBox txtAddress;
         private System.Windows.Forms.TextBox txtName;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtTimer;
+        private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.Button btnPause;
+        private System.Windows.Forms.Button btnStart;
     }
 }
 
