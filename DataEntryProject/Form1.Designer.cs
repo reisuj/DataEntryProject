@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.grbDataEntry = new System.Windows.Forms.GroupBox();
             this.btnClear = new System.Windows.Forms.Button();
             this.btnAccept = new System.Windows.Forms.Button();
@@ -46,6 +47,7 @@
             this.btnPause = new System.Windows.Forms.Button();
             this.btnStart = new System.Windows.Forms.Button();
             this.txtTimer = new System.Windows.Forms.TextBox();
+            this.timTimer = new System.Windows.Forms.Timer(this.components);
             this.grbDataEntry.SuspendLayout();
             this.grbTimer.SuspendLayout();
             this.SuspendLayout();
@@ -222,6 +224,11 @@
             this.txtTimer.Text = "00:00:00";
             this.txtTimer.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // timTimer
+            // 
+            this.timTimer.Interval = 1000;
+            this.timTimer.Tick += new System.EventHandler(this.timTimer_Tick);
+            // 
             // frmDataEntry
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -259,6 +266,7 @@
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Button btnPause;
         private System.Windows.Forms.Button btnStart;
+        private System.Windows.Forms.Timer timTimer;
     }
 }
 

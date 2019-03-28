@@ -34,5 +34,12 @@ namespace DataEntryProject
             txtZip.Clear();
             txtName.Focus();
         }
+
+        private void timTimer_Tick(object sender, EventArgs e)
+        {
+            elapsedTime += DateTime.Now - lastElapsed;
+            lastElapsed = DateTime.Now;
+            txtTimer.Text = Convert.ToString(new TimeSpan(elapsedTime.Hours, elapsedTime.Minutes, elapsedTime.Seconds));
+        }
     }
 }
