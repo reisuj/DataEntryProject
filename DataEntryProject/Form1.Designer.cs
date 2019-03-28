@@ -42,10 +42,10 @@
             this.lblAddress = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
             this.grbTimer = new System.Windows.Forms.GroupBox();
-            this.txtTimer = new System.Windows.Forms.TextBox();
-            this.btnStart = new System.Windows.Forms.Button();
-            this.btnPause = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
+            this.btnPause = new System.Windows.Forms.Button();
+            this.btnStart = new System.Windows.Forms.Button();
+            this.txtTimer = new System.Windows.Forms.TextBox();
             this.grbDataEntry.SuspendLayout();
             this.grbTimer.SuspendLayout();
             this.SuspendLayout();
@@ -79,6 +79,7 @@
             this.btnClear.TabIndex = 11;
             this.btnClear.Text = "&Clear";
             this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // btnAccept
             // 
@@ -182,25 +183,15 @@
             this.grbTimer.TabStop = false;
             this.grbTimer.Text = "Timer";
             // 
-            // txtTimer
+            // btnExit
             // 
-            this.txtTimer.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTimer.Location = new System.Drawing.Point(56, 37);
-            this.txtTimer.Name = "txtTimer";
-            this.txtTimer.ReadOnly = true;
-            this.txtTimer.Size = new System.Drawing.Size(100, 20);
-            this.txtTimer.TabIndex = 0;
-            this.txtTimer.Text = "00:00:00";
-            this.txtTimer.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // btnStart
-            // 
-            this.btnStart.Location = new System.Drawing.Point(68, 82);
-            this.btnStart.Name = "btnStart";
-            this.btnStart.Size = new System.Drawing.Size(75, 23);
-            this.btnStart.TabIndex = 12;
-            this.btnStart.Text = "&Start";
-            this.btnStart.UseVisualStyleBackColor = true;
+            this.btnExit.Location = new System.Drawing.Point(68, 285);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(75, 23);
+            this.btnExit.TabIndex = 14;
+            this.btnExit.Text = "E&xit";
+            this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // btnPause
             // 
@@ -211,14 +202,25 @@
             this.btnPause.Text = "&Pause";
             this.btnPause.UseVisualStyleBackColor = true;
             // 
-            // btnExit
+            // btnStart
             // 
-            this.btnExit.Location = new System.Drawing.Point(68, 285);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(75, 23);
-            this.btnExit.TabIndex = 14;
-            this.btnExit.Text = "E&xit";
-            this.btnExit.UseVisualStyleBackColor = true;
+            this.btnStart.Location = new System.Drawing.Point(68, 82);
+            this.btnStart.Name = "btnStart";
+            this.btnStart.Size = new System.Drawing.Size(75, 23);
+            this.btnStart.TabIndex = 12;
+            this.btnStart.Text = "&Start";
+            this.btnStart.UseVisualStyleBackColor = true;
+            // 
+            // txtTimer
+            // 
+            this.txtTimer.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTimer.Location = new System.Drawing.Point(56, 37);
+            this.txtTimer.Name = "txtTimer";
+            this.txtTimer.ReadOnly = true;
+            this.txtTimer.Size = new System.Drawing.Size(100, 20);
+            this.txtTimer.TabIndex = 0;
+            this.txtTimer.Text = "00:00:00";
+            this.txtTimer.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // frmDataEntry
             // 

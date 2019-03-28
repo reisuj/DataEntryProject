@@ -12,9 +12,27 @@ namespace DataEntryProject
 {
     public partial class frmDataEntry : Form
     {
+        TimeSpan elapsedTime;
+        DateTime lastElapsed;
+
         public frmDataEntry()
         {
             InitializeComponent();
-        }        
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            txtName.Clear();
+            txtAddress.Clear();
+            txtCity.Clear();
+            txtState.Clear();
+            txtZip.Clear();
+            txtName.Focus();
+        }
     }
 }
