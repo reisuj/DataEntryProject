@@ -41,5 +41,45 @@ namespace DataEntryProject
             lastElapsed = DateTime.Now;
             txtTimer.Text = Convert.ToString(new TimeSpan(elapsedTime.Hours, elapsedTime.Minutes, elapsedTime.Seconds));
         }
+
+        private void btnStart_Click(object sender, EventArgs e)
+        {
+            btnStart.Enabled = false;
+            btnPause.Enabled = true;
+            timTimer.Enabled = true;
+            grbDataEntry.Enabled = true;
+            txtName.Focus();
+            lastElapsed = DateTime.Now;
+        }
+
+        private void btnPause_Click(object sender, EventArgs e)
+        {
+            btnStart.Enabled = true;
+            btnPause.Enabled = false;
+            grbDataEntry.Enabled = false;
+            timTimer.Enabled = false;
+        }
+
+        private void btnAccept_Click(object sender, EventArgs e)
+        {
+            string dataEntry;
+            if (txtName.Text.Equals("") || txtAddress.Text.Equals("") ||
+                txtCity.Text.Equals("") || txtState.Text.Equals("") ||
+                txtZip.Text.Equals(""))
+            {
+                MessageBox.Show("Each box must have an input", "Error Message",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtName.Focus();
+                return;
+            }
+
+            dataEntry = txtName.Text + "\r\n" + txtAddress.Text + "\r\n" +
+                        txtCity.Text + ", " + txtState.Text + "\r\n" +
+                        txtZip.Text;
+
+            MessageBox.Show(dataEntry, "Data Entry", MessageBoxButtons.OK);
+
+            btnClear.PerformClick();
+        }
     }
 }

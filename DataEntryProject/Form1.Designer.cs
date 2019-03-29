@@ -91,6 +91,7 @@
             this.btnAccept.TabIndex = 10;
             this.btnAccept.Text = "&Accept";
             this.btnAccept.UseVisualStyleBackColor = true;
+            this.btnAccept.Click += new System.EventHandler(this.btnAccept_Click);
             // 
             // txtZip
             // 
@@ -203,6 +204,7 @@
             this.btnPause.TabIndex = 13;
             this.btnPause.Text = "&Pause";
             this.btnPause.UseVisualStyleBackColor = true;
+            this.btnPause.Click += new System.EventHandler(this.btnPause_Click);
             // 
             // btnStart
             // 
@@ -212,6 +214,7 @@
             this.btnStart.TabIndex = 12;
             this.btnStart.Text = "&Start";
             this.btnStart.UseVisualStyleBackColor = true;
+            this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
             // 
             // txtTimer
             // 
