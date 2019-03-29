@@ -81,5 +81,53 @@ namespace DataEntryProject
 
             btnClear.PerformClick();
         }
+
+        private void txtInput_Keypress(object sender, KeyPressEventArgs e)
+        {
+            string textBoxSender = ((TextBox)sender).Name;
+            if (e.KeyChar == 13)
+            {
+                switch (textBoxSender)
+                {
+                    case "txtName":
+                        txtAddress.Focus();
+                        break;
+                    case "txtAddress":
+                        txtCity.Focus();
+                        break;
+                    case "txtCity":
+                        txtState.Focus();
+                        break;
+                    case "txtState":
+                        txtZip.Focus();
+                        break;
+                    case "txtZip":
+                        btnAccept.Focus();
+                        break;                        
+                }
+            }
+
+            if (textBoxSender.Equals("txtZip"))
+            {
+                if ((e.KeyChar >= '0'  && e.KeyChar <= '9') || e.KeyChar == 8)
+                {
+                    e.Handled = false;
+                }
+                else
+                {
+                    e.Handled = true;
+                }
+            }
+        }
+
+        private void btnButtons_Hover(object sender, EventArgs e)
+        {
+            ((Button)sender).BackColor = Color.Aqua;
+        }
+
+        private void btnButtons_Leave(object sender, EventArgs e)
+        {
+            ((Button)sender).BackColor = default(Color);
+        }
     }
 }

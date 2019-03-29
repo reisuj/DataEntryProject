@@ -82,6 +82,8 @@
             this.btnClear.Text = "&Clear";
             this.btnClear.UseVisualStyleBackColor = true;
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
+            this.btnClear.MouseLeave += new System.EventHandler(this.btnButtons_Leave);
+            this.btnClear.MouseHover += new System.EventHandler(this.btnButtons_Hover);
             // 
             // btnAccept
             // 
@@ -92,6 +94,8 @@
             this.btnAccept.Text = "&Accept";
             this.btnAccept.UseVisualStyleBackColor = true;
             this.btnAccept.Click += new System.EventHandler(this.btnAccept_Click);
+            this.btnAccept.MouseLeave += new System.EventHandler(this.btnButtons_Leave);
+            this.btnAccept.MouseHover += new System.EventHandler(this.btnButtons_Hover);
             // 
             // txtZip
             // 
@@ -99,6 +103,7 @@
             this.txtZip.Name = "txtZip";
             this.txtZip.Size = new System.Drawing.Size(129, 20);
             this.txtZip.TabIndex = 9;
+            this.txtZip.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtInput_Keypress);
             // 
             // txtState
             // 
@@ -106,6 +111,7 @@
             this.txtState.Name = "txtState";
             this.txtState.Size = new System.Drawing.Size(129, 20);
             this.txtState.TabIndex = 8;
+            this.txtState.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtInput_Keypress);
             // 
             // txtCity
             // 
@@ -113,6 +119,7 @@
             this.txtCity.Name = "txtCity";
             this.txtCity.Size = new System.Drawing.Size(129, 20);
             this.txtCity.TabIndex = 7;
+            this.txtCity.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtInput_Keypress);
             // 
             // txtAddress
             // 
@@ -120,6 +127,7 @@
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(129, 20);
             this.txtAddress.TabIndex = 6;
+            this.txtAddress.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtInput_Keypress);
             // 
             // txtName
             // 
@@ -127,6 +135,7 @@
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(129, 20);
             this.txtName.TabIndex = 5;
+            this.txtName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtInput_Keypress);
             // 
             // lblZip
             // 
